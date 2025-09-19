@@ -87,4 +87,15 @@ function startOver() {
    
 })
 
+$(document).on("touchstart click", function()
+{
+    if(started===false)
+    {
+        $("h1").text("Level 0");
+        nextSequence();
+        
+        started=true;
+    }
+   
+})
 
