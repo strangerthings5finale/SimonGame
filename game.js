@@ -87,9 +87,9 @@ function startOver() {
    
 })
 
-$(document).on("touchstart click", function()
+$(document).on("touchstart", function(event)
 {
-    if(started===false)
+    if(started===false&& !$(event.target).hasClass("btn"))
     {
         $("h1").text("Level 0");
         nextSequence();
